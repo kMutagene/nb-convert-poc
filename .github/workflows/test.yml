@@ -30,7 +30,7 @@ jobs:
 
     - run: dotnet tool install -g Microsoft.dotnet-interactive
     - run: dotnet interactive jupyter install
-    - run: jupyter nbconvert --output-dir='./output' --to html *.ipynb
+    - run: jupyter nbconvert --execute --output-dir='./output' --to html *.ipynb
 
     - name: deploy
       uses: JamesIves/github-pages-deploy-action@3.7.1
